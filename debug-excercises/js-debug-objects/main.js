@@ -15,12 +15,12 @@ const cars = [
     {
         manufacturer: 'Ford',
         model: 'Fiesta',
-        type: 'diesel'
+        type: 'Diesel'
     },
     {
         manufacturer: 'Audi',
         model: 'A1',
-        type: 'benzina'
+        type: 'Benzina'
     },
     {
         manufacturer: 'Volkswagen',
@@ -30,7 +30,7 @@ const cars = [
     {
         manufacturer: 'Fiat',
         model: 'Panda',
-        type: 'metano'
+        type: 'Metano'
     },
     {
         manufacturer: 'Fiat',
@@ -40,12 +40,12 @@ const cars = [
     {
         manufacturer: 'Tesla',
         model: 'Model 3',
-        type: 'elettrico'
+        type: 'Elettrico'
     },
     {
         manufacturer: 'Volkswagen',
         model: 'Polo',
-        type: 'benzina'
+        type: 'Benzina'
     },
     {
         manufacturer: 'Ford',
@@ -55,8 +55,8 @@ const cars = [
     {
         manufacturer: 'Seat',
         model: 'Ibiza',
-        type: 'metano'
-    }
+        type: 'Metano'
+    },
     {
         manufacturer: 'Audi',
         model: 'R8',
@@ -64,23 +64,27 @@ const cars = [
     },
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+const gasolineCars = cars.filter( (auto) => {
+    return auto.type === 'Benzina';
+});
 
 const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
+    return auto.type === 'Diesel';
 });
 
 const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
+    return auto.type !== 'Benzina' && auto.type !== 'Diesel';
 });
 
 console.log('Auto a benzina');
-console.log('*******************************');
 console.log(gasolineCars);
+console.log('*******************************');
 
 console.log('Auto a diesel');
-console.log('*******************************');
 console.log(dieselCars);
+console.log('*******************************');
 
 console.log('Tutte le altre auto');
 console.log(otherCars);
+
+// In questo esercizio è presente un array di 10 macchine con varie caratteristiche, tramite filter vengono suddivise in tre array in base alla loro alimentazione (1-benzina, 2-diesel e 3-altro) e poi stampate in console.
