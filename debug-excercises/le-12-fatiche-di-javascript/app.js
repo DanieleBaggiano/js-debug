@@ -49,3 +49,9 @@ input.addEventListener('keypress', function(event) {
 
     console.log(`${item} trovato ${max} volte`);
 });
+
+// L'array viene inizializzato a null, ci sono errori nella manipolazione dell'array.
+// C'è un errore di sintassi nella dichiarazione della variabile array.
+// Ci sono errori di sintassi e di manipolazione dell'array.
+// Ci sono errori nella logica di conteggio e nell'uso delle variabili.
+// Ci sono errori nella selezione e nell'aggiornamento dei contenuti dell'elemento con classe 'alert'.
